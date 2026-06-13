@@ -20,9 +20,16 @@ export default function ARScene() {
   }, []);
 
   return (
-    <a-scene embedded arjs>
+    <a-scene
+      embedded
+      arjs="sourceType: webcam; debugUIEnabled: true;"
+      vr-mode-ui="enabled: false"
+    >
       <a-marker preset="hiro">
-        <a-box position="0 0.5 0" color="red"></a-box>
+        <a-box
+          position="0 0.5 0"
+          color="red"
+        ></a-box>
       </a-marker>
 
       <a-entity camera></a-entity>
